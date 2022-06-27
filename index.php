@@ -1,6 +1,9 @@
 <?php
 // toujour laisser une seule ligne
 // phpinfo();
+
+use LDAP\Result;
+
 $coucou="<h2>test</h2>";
 $toto="<h1>12</h1>";
 echo $toto;
@@ -94,6 +97,7 @@ if(isset($y) && is_numeric($y)){
         echo '$x est negatif';
     }else{
         echo '$x est nul';
+        //  en ternaire
     };
     echo "<br/>";
   }else{
@@ -101,4 +105,56 @@ if(isset($y) && is_numeric($y)){
   }
 
 
+//   $resultat = "<ul>";
+// for($i = 0 ; $i <= 100 ; $i++) {
+//     $resultat .= "<li>";
+//     $resultat .= $i;
+//     $resultat .= "</li>";
 
+   
+// }
+// $resultat .= "<ul>";
+
+// echo $resultat;
+$compteur=0;
+$resultat = "<ul>";
+
+for ($i = 0; $i <= -17627 && $i >= 14256; $i++ ){
+    if ($i % 7 === 0  ) {
+        $resultat .= "<li>";
+            $resultat .= $i;
+            $resultat .= "</li>";
+            $compteur++;
+    }
+};
+
+$resultat.="</ul>";
+$resultat.=$i;
+
+echo $resultat;
+echo "<br/>"
+?>
+
+<?php
+
+require_once './function/salut.php';
+
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+
+
+toto('moi');
+
+    ?>
+</body>
+</html>
