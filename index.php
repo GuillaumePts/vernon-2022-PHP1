@@ -151,9 +151,12 @@ require_once './function/salut.php';
 </head>
 <body>
     <?php
-
+function surface (int|float $param1, int|float $param2): int|float{
+    return abs($param1) * abs($param2);
+    };
 
 toto('moi');
+echo surface(10,10);
 
     ?>
 </body>
