@@ -152,11 +152,13 @@ require_once './function/salut.php';
 <body>
     <?php
 function surface (int|float $param1, int|float $param2): int|float{
-    return abs($param1) * abs($param2);
+
+    $surf= abs($param1) * abs($param2);
+    return round($surf,2);
     };
 
 toto('moi');
-echo surface(10,10);
+echo surface(10.546,10.577);
 
     ?>
 </body>
